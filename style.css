@@ -66,6 +66,10 @@ h1 {
     cursor: pointer;
 }
 
+.bundesland:hover {
+    border: 5px solid rgba(128, 128, 128, 0.5);
+}
+
 .bundesland_name {
     font-weight: bold;
     color: black;

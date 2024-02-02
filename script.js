@@ -22,14 +22,17 @@ async function fetchJSON() {
 }
 
 function renderAllBundeslaender() {
-    document.getElementById('bundeslaender_wrapper').innerHTML = '';
+    let bundeslaenderWrapper = document.getElementById('bundeslaender_wrapper');
+    bundeslaenderWrapper.innerHTML = '';
+    
     for (let i = 0; i < data.length; i++) {
         const bundesland = data[i];
         let name = bundesland['name'];
         bundeslaender_names.push(name);
-        let population = bundesland['population'];
+        let population = bundesland['population'] + '';
+        population = population.replace('.', ',')
         let url = bundesland['url'];
-        document.getElementById('bundeslaender_wrapper').innerHTML += renderHTML(name, population, url);
+        bundeslaenderWrapper.innerHTML += renderHTML(name, population, url);
     }
 }
 
