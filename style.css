@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.d_none {
+    display: none !important;
+}
+
+#wrapper {
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    /* instruction is not given but looks better */
+    /* margin: 24px; */
+}
+
+header {
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+h1 {
+    background-color: rgb(221,221,221);
+    padding: 16px;
+    color: rgb(102,102,102);
+    font-weight: bold;
+    width: 100%;
+}
+
+#bundeslaender_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    row-gap: 5px;
+}
+
+#specific_bundeslaender_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    row-gap: 5px;
+}
+
+.bundesland {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px;
+    width: 33%;
+    border: 5px solid rgb(238,238,238);
+    cursor: pointer;
+}
+
+.bundesland_name {
+    font-weight: bold;
+    color: black;
+}
+
+.bundesland_population {
+    color: rgb(134,137,141);
+}
+
+#letters {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.letter {
+    background-color: rgb(221,221,221);
+    width: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .bundesland {
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    .bundesland {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
